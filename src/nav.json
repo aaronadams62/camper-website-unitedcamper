@@ -1,16 +1,29 @@
 {
     "navItems":[
         {
-            "href":"/",
-            "page":"Platforms"
+            "href":"#hero_div",
+            "page":"Home"
         },
         {
-            "href":"/",
-            "page":"Support"
+            "href":"#programs_div",
+            "page":"Services"
         },
         {
-            "href":"/",
-            "page":"Company"
+            "href":"#showcase_div",
+            "page":"Work"
+        },
+        {
+            "href":"#showcase_div",
+            "page":"Clients"
+        },
+        {
+            "href":"#footer_div",
+            "page":"About"
+        },
+        {
+            "href":"#footer_div",
+            "page":"Contact"
         }
+        
     ]
 }

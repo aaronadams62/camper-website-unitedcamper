@@ -6,7 +6,7 @@ class Nav extends Component {
         return (
             <div id="nav_bar">
                 <div id="nav_logo_div">
-                    <img id="nav_logo" src="/assets/img/logo.png" alt="Logo" />
+                    <img id="nav_logo" src="/assets/img/united-camper-logo-zip-file/png/logo-color.png" alt="Logo" />
                 </div>
                 <div id="nav_list_items_div">
                     <ul id="nav_list">

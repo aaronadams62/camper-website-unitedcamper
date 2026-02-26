@@ -5,7 +5,7 @@ class Showcase extends Component {
     render() {
         return (
             <div id="showcase_div">
-                <h1 className="div_heading">Features</h1>
+                <h1 className="div_heading">Our Efforts</h1>
                 <div id="showcase_list_div">
 
                     {this.props.showcase.map((item, i) => {

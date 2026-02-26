@@ -1,15 +1,27 @@
 {
     "programs":[
         {
-            "image":"/assets/img/feature_one.jpg",
-            "heading":"Program One",
-            "paragraph":"Suspendisse potenti. Phasellus elementum sollicitudin ipsum quis interdum. Morbi odio tellus, dictum a posuere id, cursus quis lacus. Mauris lacus ante, commodo a dapibus quis, tincidunt vel dolor.",
+            "image":"/assets/img/services photos/Mobile-RV-Wash-and-Deatailing.jpg",
+            "heading":"Wash/Cleaning",
+            "paragraph":"We can come to you or you can drop off your camper for a indoor outdoor scrub and cleaning. see our packages below",
             "href":"/"
         },
         {
-            "image":"/assets/img/feature_two.jpg",
-            "heading":"Program Two",
-            "paragraph":"Suspendisse potenti. Phasellus elementum sollicitudin ipsum quis interdum. Morbi odio tellus, dictum a posuere id, cursus quis lacus. Mauris lacus ante, commodo a dapibus quis, tincidunt vel dolor.",
+            "image":"/assets/img/services photos/camper rental photo.jpg",
+            "heading":"Rental",
+            "paragraph":"rental price is determined by a few factors, one size of the camper, availability and if needing it delivered or not. get a free estimate below, simply state when you are going, what camper you'd like to take and if you need it delivered or not.",
+            "href":"/"
+        },
+        {
+            "image":"/assets/img/services photos/camper being towed.jpg",
+            "heading":"Towing",
+            "paragraph":"We offer towing packages if you need a camper (ours or yours) delivered or picked up or round trips of any trailer whether it be fifth wheel or bumper pulled.",
+            "href":"/"
+        },
+        {
+            "image":"/assets/img/services photos/camper being repaired.jpg",
+            "heading":"Repair",
+            "paragraph":"We offer some Light camper repair depending on the situation. and we have a Sewage Dump on site",
             "href":"/"
         }
     ]

@@ -32,7 +32,7 @@ class Footer extends Component {
                         </ul>
                     </div>
                 </div>
-                <p className="div_subheading red">© 2018 Avonlea Haymart</p>
+                <p className="div_subheading red">(c) 2018 Avonlea Haymart</p>
             </div>
         )
     }

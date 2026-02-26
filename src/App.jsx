@@ -4,7 +4,7 @@ import './App.css';
 import Container from './components/Container';
 import Hero from './components/Hero';
 import Showcase from './components/Showcase';
-import Programs from './components/Programs';
+import Programs from './components/services';
 import Footer from './components/Footer';
 
 import navItems from './nav.json';
