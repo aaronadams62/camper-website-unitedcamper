@@ -1,8 +1,7 @@
 {
   "name": "united-camper-v2",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/avhaymart/Software-Company-Website.git",
+  "repository": "https://github.com/aaronadams62/camper-website-unitedcamper.git",
   "author": "aaron adams <aaronadams62@outlook.com>",
   "license": "MIT",
   "dependencies": {

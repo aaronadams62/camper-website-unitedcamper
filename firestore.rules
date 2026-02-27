@@ -1,8 +1,26 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+    // Public submissions collection (no auth) with strict schema limits.
+    match /public_submissions/{docId} {
+      allow read: if true;
+      allow create: if
+        request.resource.data.keys().hasOnly(['name', 'email', 'message', 'createdAt']) &&
+        request.resource.data.name is string &&
+        request.resource.data.email is string &&
+        request.resource.data.message is string &&
+        request.resource.data.name.size() > 0 &&
+        request.resource.data.name.size() <= 100 &&
+        request.resource.data.email.size() > 3 &&
+        request.resource.data.email.size() <= 200 &&
+        request.resource.data.message.size() > 0 &&
+        request.resource.data.message.size() <= 2000;
+      allow update, delete: if false;
+    }
+
+    // Explicitly deny everything else by default.
     match /{document=**} {
-      allow read, write: if true;
+      allow read, write: if false;
     }
   }
 }

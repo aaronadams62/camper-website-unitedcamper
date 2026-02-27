@@ -24,17 +24,30 @@ if (missing.length) {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-const ref = doc(db, '_health', 'cli_smoke_test');
+const ref = doc(db, 'public_submissions', 'cli_smoke_test_' + Date.now());
 const writeEnabled = process.env.SMOKE_FIREBASE_WRITE === 'true';
 
 try {
   const readSnap = await getDoc(ref);
-  console.log('Firebase connectivity check succeeded.', 'projectId=' + firebaseConfig.projectId);
+  console.log(
+    'Firebase connectivity check succeeded.',
+    'projectId=' + firebaseConfig.projectId,
+    'docExists=' + readSnap.exists()
+  );
   if (!writeEnabled) {
     process.exit(0);
   }
 
-  await setDoc(ref, { updatedAt: serverTimestamp() }, { merge: true });
+  await setDoc(
+    ref,
+    {
+      name: 'CLI Smoke Test',
+      email: 'smoke@example.com',
+      message: 'Connectivity check',
+      createdAt: serverTimestamp()
+    },
+    { merge: false }
+  );
   const writeSnap = await getDoc(ref);
   console.log('Firebase write smoke test succeeded.', 'docExists=' + writeSnap.exists());
 } catch (error) {

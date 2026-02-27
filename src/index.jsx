@@ -7,13 +7,15 @@ import { runFirebaseSmokeTest } from './firebaseSmokeTest';
 
 if (isFirebaseConfigured) {
   console.log('Firebase initialized.');
-  runFirebaseSmokeTest().then(function (result) {
-    if (result.ok) {
-      console.log('Firebase smoke test succeeded.');
-      return;
-    }
-    console.warn('Firebase smoke test failed:', result.reason);
-  });
+  if (import.meta.env.DEV) {
+    runFirebaseSmokeTest().then(function (result) {
+      if (result.ok) {
+        console.log('Firebase smoke test succeeded.');
+        return;
+      }
+      console.warn('Firebase smoke test failed:', result.reason);
+    });
+  }
 }
 
 const root = createRoot(document.getElementById('root'));
